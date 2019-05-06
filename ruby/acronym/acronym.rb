@@ -1,14 +1,10 @@
 class Acronym
-	def self.abbreviate(phrase)
-		phrase = 'Portable Network Graphics'
+  def self.abbreviate(phrase)
     array = phrase.split(' ') #["Portable", "Network", "Graphics"] 
-    array.each do |item|
-      puts [item][0]#first letter of each word
-      
-    end
-    #split phrase into an array of words
-		#for each word, return first letter
-    #capitalise each letter
-	end
+    array_2 = array.each_slice(1).to_a #[["Portable"], ["Network"], ["Graphics"]]
+    array_3 = array_2[0][0][0] # "P"
+    array_4 = array_2[1][0][0] # "N"
+    array_5 = array_2[2][0][0] # "G"
+    array_6 = [array_3, array_4, array_5].join # "PNG"
+  end
 end
-
