@@ -10,5 +10,5 @@ SEQUENCES = {
   def self.of_dna(sequences) 
     result = sequences.each_char.map{|sequence| SEQUENCES.fetch(sequence)}.join
     p result
-  end
+  end 
 end
